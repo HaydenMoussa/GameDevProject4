@@ -4,7 +4,6 @@ public class NPC : MonoBehaviour
 {
     [SerializeField] bool firstInteraction = true;
 
-    public bool caffeinated = false;
     public int repeatStartPosition;
 
     public Inventory inv;
@@ -29,11 +28,7 @@ public class NPC : MonoBehaviour
     }
     public void ChangeDialogue(DialogueAsset d){
         dialogueAsset = d;
-        caffeinated = true;
     }
 
-    public bool checkCaffeinated(){
-        return caffeinated;
-    }
-
+   
 }
