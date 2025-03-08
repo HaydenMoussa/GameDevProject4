@@ -6,7 +6,6 @@ public class NPC : MonoBehaviour
 
     public int repeatStartPosition;
 
-    public Inventory inv;
 
     public string npcName;
     public DialogueAsset dialogueAsset;
