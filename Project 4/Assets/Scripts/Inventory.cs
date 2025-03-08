@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-     List<Item> inventory = new List<Item>();
+     List<Item> inventory;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

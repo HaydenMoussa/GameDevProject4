@@ -15,10 +15,10 @@ public class GameManager : MonoBehaviour
             Instance = this;
         DontDestroyOnLoad(this);
     }
-    public Inventory inventory;
+    private Inventory inventory;
     
-    [SerializeField] TextMeshProUGUI dialogueText;
-    [SerializeField] TextMeshProUGUI nameText;
+    [SerializeField] TextMeshPro dialogueText;
+    [SerializeField] TextMeshPro nameText;
     [SerializeField] GameObject dialoguePanel;
 
     
@@ -109,7 +109,7 @@ IEnumerator TypeTextUncapped(string line)
     void Start()
     {
         dialoguePanel.SetActive(false);
-        inventory = new Inventory();
+
 
     }
 

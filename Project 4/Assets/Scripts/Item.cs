@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    public string itemName;
+    private string itemName;
     private Rigidbody itemBody;
     public GameObject goal;
 
@@ -13,6 +13,7 @@ public class Item : MonoBehaviour
     void Start()
     {
         itemBody = GetComponent<Rigidbody>();
+        itemName = GetComponent<GameObject>().ToString();
         
     }
 

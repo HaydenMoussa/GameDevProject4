@@ -1,8 +1,8 @@
+using Unity.Collections;
 using UnityEngine;
 
 public class PlayerConvo : MonoBehaviour
 {
-    [SerializeField] float talkDistance = 2;
     bool inConversation;
 
     void Update()
@@ -23,9 +23,14 @@ public class PlayerConvo : MonoBehaviour
         }
         else
         {
-            Debug.Log("Looking for NPC");
-            RaycastHit2D hit = Physics2D.CircleCast(transform.position, talkDistance, Vector2.up, 0, LayerMask.GetMask("NPC"));
-            if (hit)
+        Debug.Log("Looking for NPC");
+        RaycastHit hit;
+
+        Vector3 p1 = transform.position;
+
+        // Cast a sphere wrapping character controller 10 meters forward
+        // to see if it is about to hit anything.
+            if (Physics.SphereCast(p1, 2, transform.forward, out hit, 5, LayerMask.GetMask("NPC")))
             {
                 Debug.Log("Hit Something!!" + hit.collider.gameObject.name);
 
