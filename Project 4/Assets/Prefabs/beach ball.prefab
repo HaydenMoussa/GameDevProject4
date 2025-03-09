@@ -64,6 +64,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: beach ball
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: df0bd809b72290c48885ac43d13213ae, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: df0bd809b72290c48885ac43d13213ae, type: 3}
+      propertyPath: m_TagString
+      value: CanPickUp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -95,7 +103,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8028405804200dd40aad10c81fb5a480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Ball
   goal: {fileID: 0}
   isHeld: 0
 --- !u!54 &6157082106593883207
