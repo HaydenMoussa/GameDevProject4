@@ -3,11 +3,21 @@ using TMPro;
 using UnityEngine;
 using System;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 public class GameManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     public static GameManager Instance { get; private set; }
+
+    [Header("Goal Tracking")]
+    [SerializeField] private bool autoFindGoals = true;
+    [SerializeField] private Goal[] manualGoalReferences;
+    [SerializeField] private TextMeshProUGUI totalScoreText;
+
+    private List<Goal> activeGoals = new List<Goal>();
+    private int cachedTotalScore = 0;
+
+
     void Awake() {
         if(Instance != null)
             Destroy(Instance);
@@ -21,11 +31,19 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI nameText;
     [SerializeField] GameObject dialoguePanel;
 
-    
-
     public static event Action OnDialogueStarted;
     public static event Action OnDialogueEnded;
     bool skipLineTriggered;
+
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Find goals in the newly loaded scene
+        if (autoFindGoals)
+        {
+            FindAllGoals();
+        }
+    }
 
 public void StartDialogue(string[] dialogue, int startPosition, string name)
     {
@@ -109,16 +127,93 @@ IEnumerator TypeTextUncapped(string line)
     public void GameOver() {
         Initiate.Fade("GameOver", Color.black, 2f);
     }
-    // Start is called once before the first execution of Update 
     void Start()
     {
         dialoguePanel.SetActive(false);
 
+        // Initialize goals list
+        if (autoFindGoals)
+        {
+            FindAllGoals();
+        }
+        else if (manualGoalReferences.Length > 0)
+        {
+            activeGoals.AddRange(manualGoalReferences);
+        }
+        
+        StartCoroutine(TrackScoresRoutine());
+
 
     }
 
-    // Update is called once per frame
+    private void FindAllGoals()
+    {
+        activeGoals.Clear();
+        Goal[] foundGoals = FindObjectsByType<Goal>(FindObjectsSortMode.None);
+        activeGoals.AddRange(foundGoals);
+        Debug.Log($"Found {foundGoals.Length} goal objects in the scene");
+    }
+    
+    private IEnumerator TrackScoresRoutine()
+    {
+        while (true)
+        {
+            // Check if total score has changed
+            int newTotalScore = CalculateTotalScore();
+            
+            if (newTotalScore != cachedTotalScore)
+            {
+                cachedTotalScore = newTotalScore;
+                
+                // Update UI if assigned
+                if (totalScoreText != null)
+                {
+                    totalScoreText.text = "Total Score: " + cachedTotalScore;
+                }
+                
+                //Debug.Log("Total score across all goals: " + cachedTotalScore);
+            }
+            
+            yield return new WaitForSeconds(0.5f); 
+        }
+    }
+    
+    private int CalculateTotalScore()
+    {
+        int total = 0;
+        
+        // Remove any null references (destroyed goals)
+        activeGoals.RemoveAll(goal => goal == null);
+        
+        foreach (Goal goal in activeGoals)
+        {
+            total += goal.getScore();
+        }
+        
+        return total;
+    }
+    
+    // Public method for other scripts to get the total score
+    public int GetTotalScore()
+    {
+        return cachedTotalScore;
+    }
+    
+    // Public method to manually add a goal to tracking
+    public void RegisterGoal(Goal goal)
+    {
+        if (!activeGoals.Contains(goal))
+        {
+            activeGoals.Add(goal);
+        }
+    }
+
     void Update()
     {
+    }
+
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }
