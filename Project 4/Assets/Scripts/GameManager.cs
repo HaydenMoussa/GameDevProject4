@@ -107,7 +107,7 @@ IEnumerator TypeTextUncapped(string line)
 }
 
     public void GameOver() {
-        Initiate.Fade("GameOver", Color.black, 0.1f);
+        Initiate.Fade("GameOver", Color.black, 2f);
     }
     // Start is called once before the first execution of Update 
     void Start()
