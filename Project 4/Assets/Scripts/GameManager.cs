@@ -17,8 +17,8 @@ public class GameManager : MonoBehaviour
     }
     private Inventory inventory;
     
-    [SerializeField] TextMeshPro dialogueText;
-    [SerializeField] TextMeshPro nameText;
+    [SerializeField] TextMeshProUGUI dialogueText;
+    [SerializeField] TextMeshProUGUI nameText;
     [SerializeField] GameObject dialoguePanel;
 
     
