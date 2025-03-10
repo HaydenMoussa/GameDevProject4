@@ -1,3 +1,4 @@
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -15,6 +16,7 @@ public class Timer : MonoBehaviour
     Vignette vignette;
     float baseIntensity;
     bool pause;
+    public TextMeshProUGUI timeText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,6 +34,7 @@ public class Timer : MonoBehaviour
     {
         if (active) {
             Tick();
+            timeText.text = time.ToString();
         }
         ChangeVignette();
     }
@@ -43,6 +46,7 @@ public class Timer : MonoBehaviour
 
     public void SetActive(bool state) {
         active = state;
+        timeText.text = time.ToString();
     }
 
     void Tick() {
