@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - CanPickUp
+  - Baseball
+  - Beachball
+  - BaseballGoal
+  - BeachballGoal
   layers:
   - Default
   - TransparentFX

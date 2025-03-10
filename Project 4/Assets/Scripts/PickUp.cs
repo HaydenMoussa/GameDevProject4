@@ -42,7 +42,7 @@ public class PickUp : MonoBehaviour
                 if (Physics.Raycast(rayOrigin, transform.forward, out hit, pickUpRange))
                 {
                     
-                    if (hit.transform.gameObject.tag == "CanPickUp")
+                    if (hit.transform.gameObject.tag == "Baseball" || hit.transform.gameObject.tag == "Beachball")
                     {
                         //Debug.Log("Object has CanPickUp tag - attempting pickup");
                         PickUpObject(hit.transform.gameObject);
