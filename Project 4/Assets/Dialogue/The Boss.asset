@@ -13,4 +13,11 @@ MonoBehaviour:
   m_Name: The Boss
   m_EditorClassIdentifier: 
   dialogue:
+  - 'Remember, your goal is to throw stuff into that there crate...
+
+'
+  - You know, the one on the rocks! A timer starts when you pick up your first object
+  - Remember, if you run out of time...you're dead...
+  - Haha I'm just jokin...
+  - I'll just fire you
   - Knock em dead kiddo

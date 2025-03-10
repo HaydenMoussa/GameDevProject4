@@ -68,44 +68,8 @@ public class Goal : MonoBehaviour
             // PlayWrongBallEffect();
         }
     }
-    
-    private void ProcessGoal(GameObject ball)
-    {
-        // Increment score
-        score++;
-        
-        // Update score text if assigned
-        if (scoreText != null)
-        {
-            scoreText.text = "Score: " + score;
-        }
-        
-        // Play particle effect if assigned
-        if (goalParticles != null)
-        {
-            goalParticles.transform.position = ball.transform.position;
-            goalParticles.Play();
-        }
-        else
-        {
-            Debug.LogWarning("No particle system assigned to Goal script!");
-        }
-        
-        // Play sound if assigned
-        if (goalSound != null && GetComponent<AudioSource>() != null)
-        {
-            GetComponent<AudioSource>().PlayOneShot(goalSound);
-        }
-        
-        // Destroy the ball
-        Destroy(ball);
-        
-        Debug.Log(acceptedBallTag + " goal! Score is now: " + score);
-    }
-    
-    private void PlayWrongBallEffect()
-    {
-        // You could add different particles, sounds, or visual feedback
-        Debug.Log("Wrong ball type entered goal");
+
+    public int getScore(){
+        return score;
     }
 }

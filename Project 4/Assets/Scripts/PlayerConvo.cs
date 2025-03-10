@@ -30,7 +30,7 @@ public class PlayerConvo : MonoBehaviour
 
         // Cast a sphere wrapping character controller 10 meters forward
         // to see if it is about to hit anything.
-            if (Physics.SphereCast(p1, 2, transform.forward, out hit, 5, LayerMask.GetMask("NPC")))
+            if (Physics.SphereCast(p1, 0, transform.forward, out hit, 5, LayerMask.GetMask("NPC")))
             {
                 Debug.Log("Hit Something!!" + hit.collider.gameObject.name);
 
