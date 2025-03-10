@@ -6337,7 +6337,6 @@ Transform:
   - {fileID: 634435902}
   - {fileID: 1979824439}
   - {fileID: 1059100611}
-  - {fileID: 626823204}
   - {fileID: 178197632}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6494,11 +6493,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1.3809804
   m_Center: {x: -0.025934635, y: -0.22451471, z: -0.13865815}
---- !u!4 &626823204 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4517740199119114, guid: 0fd5be61d8c00de419d45d6bf745a69c, type: 3}
-  m_PrefabInstance: {fileID: 966817168}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &634435902 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4548539680920072, guid: 6fc2010b5899cfd488a0ddf205679e2b, type: 3}
@@ -7219,6 +7213,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goalParticles: {fileID: 244267701}
   goalSound: {fileID: 0}
+  ballTag: CanPickUp
+  timer: {fileID: 754798994}
   scoreText: {fileID: 0}
 --- !u!65 &1000702950
 BoxCollider:
@@ -8196,6 +8192,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goalParticles: {fileID: 244267701}
   goalSound: {fileID: 0}
+  ballTag: CanPickUp
+  timer: {fileID: 754798994}
   scoreText: {fileID: 0}
 --- !u!1 &1376793914
 GameObject:
@@ -11394,3 +11392,6 @@ SceneRoots:
   - {fileID: 754798995}
   - {fileID: 1584015489}
   - {fileID: 437569997}
+  - {fileID: 535566670}
+  - {fileID: 662749218}
+  - {fileID: 685262734}
