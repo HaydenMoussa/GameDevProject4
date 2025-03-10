@@ -70,6 +70,6 @@ public class Timer : MonoBehaviour
     void ChangeVignette() {
         float offset = 1 - (time/maxTime);
         vignette.intensity.Override(baseIntensity + offset*(1-baseIntensity));
-        Debug.Log("timer is " + time + ", offset is " + offset + ", adding " + offset*(1-baseIntensity) + " to vignette");
+        //Debug.Log("timer is " + time + ", offset is " + offset + ", adding " + offset*(1-baseIntensity) + " to vignette");
     }
 }
