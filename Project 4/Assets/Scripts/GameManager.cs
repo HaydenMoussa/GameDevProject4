@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using System;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 public class GameManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,7 +16,7 @@ public class GameManager : MonoBehaviour
             Instance = this;
         DontDestroyOnLoad(this);
     }
-    private Inventory inventory;
+    private int score;
     
     [SerializeField] TextMeshProUGUI dialogueText;
     [SerializeField] TextMeshProUGUI nameText;
@@ -110,10 +111,18 @@ IEnumerator TypeTextUncapped(string line)
         Initiate.Fade("GameOver", Color.black, 2f);
     }
     // Start is called once before the first execution of Update 
+    public void incScore(){
+        score++;
+        Debug.Log("Increasing Score" + score);
+    }
+
+    public int getScore(){
+        return score;
+    }
     void Start()
     {
         dialoguePanel.SetActive(false);
-
+        score = 0;
 
     }
 

@@ -65,6 +65,7 @@ public class Goal : MonoBehaviour
     private void ScoreGoal(Collider ball)
     {
         score++;
+        GameManager.Instance.incScore();
         
         timer.Reset();
         if (!timer.active) {

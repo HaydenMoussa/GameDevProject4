@@ -4,7 +4,6 @@ public class Item : MonoBehaviour
 {
     private string itemName;
     private Rigidbody itemBody;
-    public GameObject goal;
 
     public bool isHeld = false;
 
@@ -20,9 +19,9 @@ public class Item : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Mathf.Abs(itemBody.position.x - goal.transform.position.x) <= 1 && Mathf.Abs(itemBody.position.y - goal.transform.position.y) <= 1 && Mathf.Abs(itemBody.position.z - goal.transform.position.z) <= 1){
-            isIn = true;
-        }
+        //if(Mathf.Abs(itemBody.position.x - goal.transform.position.x) <= 1 && Mathf.Abs(itemBody.position.y - goal.transform.position.y) <= 1 && Mathf.Abs(itemBody.position.z - goal.transform.position.z) <= 1){
+        //    isIn = true;
+        //}
        
     }
 
