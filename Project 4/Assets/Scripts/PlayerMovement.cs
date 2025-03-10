@@ -52,6 +52,10 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         MovePlayer();
+        if (!grounded)
+        {
+            rb.AddForce(Vector3.down * 10f, ForceMode.Force);
+        }
     }
 
     private void MyInput(){
@@ -70,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
     private void MovePlayer()
     {
         moveDirection = orientation.forward * verticalInput+ orientation.right * horizontalInput;
-        rb.AddForce(moveDirection.normalized *moveSpeed * 10f, ForceMode.Force);
+        //rb.AddForce(moveDirection.normalized *moveSpeed * 10f, ForceMode.Force);
 
         if(grounded){
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
