@@ -105,6 +105,10 @@ IEnumerator TypeTextUncapped(string line)
         }
     }
 }
+
+    public void GameOver() {
+        //Add game over transition here
+    }
     // Start is called once before the first execution of Update 
     void Start()
     {

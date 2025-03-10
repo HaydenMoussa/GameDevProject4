@@ -11,6 +11,8 @@ public class Goal : MonoBehaviour
     public string ballTag = "CanPickUp";
     
     private int score = 0;
+
+    public Timer timer;
     
     public TMPro.TextMeshProUGUI scoreText;
     
@@ -20,6 +22,12 @@ public class Goal : MonoBehaviour
         {
             score++;
             
+            timer.Reset();
+
+            if (!timer.active) {
+                timer.SetActive(true);
+            }
+
             // Update score text if assigned
             if (scoreText != null)
             {
