@@ -58,4 +58,8 @@ public class Goal : MonoBehaviour
             Debug.Log("Goal! Score is now: " + score);
         }
     }
+
+    public int getScore(){
+        return score;
+    }
 }
