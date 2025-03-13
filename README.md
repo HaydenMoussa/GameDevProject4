@@ -21,8 +21,13 @@ I always really enjoy comming up with the narrative/story for games, and that wa
 
 ## Atributes
 "Beach Ball" (https://skfb.ly/orsuA) by Maggatron is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
-"Free 3D Baseball fbx Model with PBR Texture" (https://skfb.ly/oVCUM) by B1Blender is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+"Free 3D Baseball fbx Model with PBR Texture" (https://skfb.ly/oVCUM) by B1Blender is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/)
+"RPG Poly Pack - Lite" by Gigel
+"Stylized Western Wooden Bucket" by Pijayart
+"Medieval Tent Big" by Kawetofe
+"Regular Impact Sounds - Sound Effects" by Alan Dalcastagne da Cunha
+Skybox - https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633#description
+Gems - https://assetstore.unity.com/packages/3d/props/simple-gems-and-items-ultimate-animated-customizable-pack-73764#asset_quality
 
 ## Contributions
-a listing of the attributions for your game assets (art, sounds, etc),
-a paragraph discussing the contributions of each team member to the final game.
+Eden implimented the timer, audio and SFX, and found environment models. Hayden implimented character control and movment, throwing, and the non playable scenes. Leigh designed the throwable ojects, the story/narrative, the NPC and character animation, and the scene design. All three of us adjusted and helped each other where needed as well.
