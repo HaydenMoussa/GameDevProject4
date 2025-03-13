@@ -17,4 +17,9 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene(3);
     }
+    public void MenuBack()
+    {
+        Debug.Log("Click back");
+        SceneManager.LoadScene(2);
+    }
 }
