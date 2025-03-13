@@ -16,6 +16,7 @@ We wanted this game to give medival/circus performance vibes.
 
 ### Eden's POV
 ### Hayden's POV
+I had previously only worked in 2D games and I had spent a lot of time working on mechanics using 2D vecotrs and stuff. So it was refreshing to work in the new 3D enviorment on movement. A struggle I had was colliders, in particular I found it hard to position the coliders in the correct spot around the game objects.
 ### Leigh's POV
 I always really enjoy coming up with the narrative/story for games, and that was definitely the case with this one. Figuring out how to get the NPC added was also fun. Moving from 2D game design to 3D was definitely aa slight challenge, especially trying to design the world, and I had some merge issues along the way.
 
