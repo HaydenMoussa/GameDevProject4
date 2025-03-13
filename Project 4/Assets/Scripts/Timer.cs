@@ -18,9 +18,11 @@ public class Timer : MonoBehaviour
     bool pause;
     bool over;
     public TextMeshProUGUI timeText;
+    MusicPlayer player;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        player = GameObject.FindWithTag("Respawn").GetComponent<MusicPlayer>();
         over = false;
         pause = false;
         maxTime = time;
@@ -62,6 +64,7 @@ public class Timer : MonoBehaviour
         else {
             if (!over){
                 over = true;
+            player.SetVolume(0);
             manager.GameOver();}
 
         }

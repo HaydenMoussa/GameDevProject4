@@ -28,6 +28,9 @@ I always really enjoy coming up with the narrative/story for games, and that was
 "Regular Impact Sounds - Sound Effects" by Alan Dalcastagne da Cunha
 Skybox - https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633#description
 Gems - https://assetstore.unity.com/packages/3d/props/simple-gems-and-items-ultimate-animated-customizable-pack-73764#asset_quality
+Class Code - https://github.com/mgoadric/csci370/tree/master/2025/BoxWorldClass
+3D Movement Tutorial - https://www.youtube.com/watch?v=f473C43s8nE
+Pick Up Object Tutorial - https://github.com/JonDevTutorial/PickUpTutorial/blob/main/PickUpScript.cs
 
 ## Contributions
 Eden implimented the timer, audio and SFX, and found environment models. Hayden implimented character control and movment, throwing, and the non playable scenes. Leigh designed the throwable ojects, the story/narrative, the NPC and character animation, and the scene design. All three of us adjusted and helped each other where needed as well.
