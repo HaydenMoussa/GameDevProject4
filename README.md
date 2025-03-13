@@ -17,7 +17,7 @@ We wanted this game to give medival/circus performance vibes.
 ### Eden's POV
 ### Hayden's POV
 ### Leigh's POV
-I always really enjoy comming up with the narrative/story for games, and that was definitely the case with this one. Moving from 2D game design to 3D was definitely aa slight challenge, and was frustrating at times, and I always struggle with GitHub.
+I always really enjoy coming up with the narrative/story for games, and that was definitely the case with this one. Figuring out how to get the NPC added was also fun. Moving from 2D game design to 3D was definitely aa slight challenge, especially trying to design the world, and I had some merge issues along the way.
 
 ## Atributes
 "Beach Ball" (https://skfb.ly/orsuA) by Maggatron is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
