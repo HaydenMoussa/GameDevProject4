@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goalParticles: {fileID: 244267701}
-  goalSound: {fileID: 0}
+  goalSound: {fileID: 8300000, guid: a7bf252e44b29c141b4af815746fa925, type: 3}
   ballTag: CanPickUp
   timer: {fileID: 754798994}
   scoreText: {fileID: 0}
@@ -9415,7 +9415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goalParticles: {fileID: 244267701}
-  goalSound: {fileID: 0}
+  goalSound: {fileID: 8300000, guid: a7bf252e44b29c141b4af815746fa925, type: 3}
   ballTag: CanPickUp
   timer: {fileID: 754798994}
   scoreText: {fileID: 0}
