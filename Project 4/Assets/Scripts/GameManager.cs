@@ -125,6 +125,15 @@ IEnumerator TypeTextUncapped(string line)
 }
 
     public void GameOver() {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None; 
+        
+        
+        PlayerCam[] playerCams = FindObjectsByType<PlayerCam>(FindObjectsSortMode.None);
+        foreach (PlayerCam cam in playerCams) {
+            cam.enabled = false;
+        }
+        
         Initiate.Fade("GameOver", Color.black, 2f);
     }
     void Start()

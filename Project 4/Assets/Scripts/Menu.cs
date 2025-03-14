@@ -6,8 +6,8 @@ public class Menu : MonoBehaviour
     MusicPlayer player;
     public void OnPlay()
     {
-        SceneManager.LoadScene(0);
-        player.SetVolume(.50f);
+        SceneManager.LoadScene(1);
+        //player.SetVolume(.50f);
     }
 
     public void OnCredits()
@@ -22,11 +22,22 @@ public class Menu : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindWithTag("Respawn").GetComponent<MusicPlayer>();   
+        GameObject playerObject = GameObject.FindWithTag("Respawn");
+        if (playerObject != null)
+        {
+            MusicPlayer player = playerObject.GetComponent<MusicPlayer>();
+            // You can now use the player variable safely
+        }
+        else
+        {
+            // Handle the case where no object with the "Respawn" tag was found
+            Debug.Log("No object with Respawn tag found!");
+        }
+         
     }
     public void MenuBack()
     {
         Debug.Log("Click back");
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(0);
     }
 }
